@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		992CC56E1C47478500AAAB92 /* WJMazeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 992CC56D1C47478500AAAB92 /* WJMazeView.m */; };
+		99CF45B61C448750000BA046 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45B51C448750000BA046 /* main.m */; };
+		99CF45B91C448750000BA046 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45B81C448750000BA046 /* AppDelegate.m */; };
+		99CF45BF1C448750000BA046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99CF45BD1C448750000BA046 /* Main.storyboard */; };
+		99CF45C11C448750000BA046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CF45C01C448750000BA046 /* Assets.xcassets */; };
+		99CF45C41C448750000BA046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99CF45C21C448750000BA046 /* LaunchScreen.storyboard */; };
+		99CF45CF1C448751000BA046 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45CE1C448751000BA046 /* ___Tests.m */; };
+		99CF45DA1C448751000BA046 /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45D91C448751000BA046 /* ___UITests.m */; };
+		99CF45E91C4488C7000BA046 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45E81C4488C7000BA046 /* Stack.m */; };
+		99CF45EC1C448C30000BA046 /* Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45EB1C448C30000BA046 /* Path.m */; };
+		99CF45F01C448E68000BA046 /* WJPathButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45EF1C448E68000BA046 /* WJPathButton.m */; };
+		99CF45F61C449204000BA046 /* WJFirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45F51C449204000BA046 /* WJFirstController.m */; };
+		99CF45F91C449660000BA046 /* WJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99CF45F81C449660000BA046 /* WJMainViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99CF45CB1C448751000BA046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99CF45A91C448750000BA046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99CF45B01C448750000BA046;
+			remoteInfo = "走迷宫";
+		};
+		99CF45D61C448751000BA046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99CF45A91C448750000BA046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99CF45B01C448750000BA046;
+			remoteInfo = "走迷宫";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		992CC56C1C47478500AAAB92 /* WJMazeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJMazeView.h; sourceTree = "<group>"; };
+		992CC56D1C47478500AAAB92 /* WJMazeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJMazeView.m; sourceTree = "<group>"; };
+		99CF45B11C448750000BA046 /* 走迷宫.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "走迷宫.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99CF45B51C448750000BA046 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		99CF45B71C448750000BA046 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		99CF45B81C448750000BA046 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		99CF45BE1C448750000BA046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		99CF45C01C448750000BA046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99CF45C31C448750000BA046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		99CF45C51C448750000BA046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99CF45CA1C448751000BA046 /* 走迷宫Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "走迷宫Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99CF45CE1C448751000BA046 /* ___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___Tests.m"; sourceTree = "<group>"; };
+		99CF45D01C448751000BA046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99CF45D51C448751000BA046 /* 走迷宫UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "走迷宫UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99CF45D91C448751000BA046 /* ___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___UITests.m"; sourceTree = "<group>"; };
+		99CF45DB1C448751000BA046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99CF45E71C4488C7000BA046 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		99CF45E81C4488C7000BA046 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		99CF45EA1C448C30000BA046 /* Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Path.h; sourceTree = "<group>"; };
+		99CF45EB1C448C30000BA046 /* Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Path.m; sourceTree = "<group>"; };
+		99CF45EE1C448E68000BA046 /* WJPathButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJPathButton.h; sourceTree = "<group>"; };
+		99CF45EF1C448E68000BA046 /* WJPathButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJPathButton.m; sourceTree = "<group>"; };
+		99CF45F41C449204000BA046 /* WJFirstController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJFirstController.h; sourceTree = "<group>"; };
+		99CF45F51C449204000BA046 /* WJFirstController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJFirstController.m; sourceTree = "<group>"; };
+		99CF45F71C449660000BA046 /* WJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJMainViewController.h; sourceTree = "<group>"; };
+		99CF45F81C449660000BA046 /* WJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJMainViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99CF45AE1C448750000BA046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99CF45C71C448751000BA046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99CF45D21C448751000BA046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99CF45A81C448750000BA046 = {
+			isa = PBXGroup;
+			children = (
+				99CF45B31C448750000BA046 /* 走迷宫 */,
+				99CF45CD1C448751000BA046 /* 走迷宫Tests */,
+				99CF45D81C448751000BA046 /* 走迷宫UITests */,
+				99CF45B21C448750000BA046 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		99CF45B21C448750000BA046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45B11C448750000BA046 /* 走迷宫.app */,
+				99CF45CA1C448751000BA046 /* 走迷宫Tests.xctest */,
+				99CF45D51C448751000BA046 /* 走迷宫UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99CF45B31C448750000BA046 /* 走迷宫 */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45F31C449146000BA046 /* controllers */,
+				99CF45F21C44912C000BA046 /* main */,
+				99CF45F11C449117000BA046 /* models */,
+				99CF45ED1C448E3F000BA046 /* VIews */,
+				99CF45B71C448750000BA046 /* AppDelegate.h */,
+				99CF45B81C448750000BA046 /* AppDelegate.m */,
+				99CF45BD1C448750000BA046 /* Main.storyboard */,
+				99CF45C01C448750000BA046 /* Assets.xcassets */,
+				99CF45C21C448750000BA046 /* LaunchScreen.storyboard */,
+				99CF45C51C448750000BA046 /* Info.plist */,
+				99CF45B41C448750000BA046 /* Supporting Files */,
+			);
+			path = "走迷宫";
+			sourceTree = "<group>";
+		};
+		99CF45B41C448750000BA046 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45B51C448750000BA046 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		99CF45CD1C448751000BA046 /* 走迷宫Tests */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45CE1C448751000BA046 /* ___Tests.m */,
+				99CF45D01C448751000BA046 /* Info.plist */,
+			);
+			path = "走迷宫Tests";
+			sourceTree = "<group>";
+		};
+		99CF45D81C448751000BA046 /* 走迷宫UITests */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45D91C448751000BA046 /* ___UITests.m */,
+				99CF45DB1C448751000BA046 /* Info.plist */,
+			);
+			path = "走迷宫UITests";
+			sourceTree = "<group>";
+		};
+		99CF45ED1C448E3F000BA046 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45EE1C448E68000BA046 /* WJPathButton.h */,
+				99CF45EF1C448E68000BA046 /* WJPathButton.m */,
+				992CC56C1C47478500AAAB92 /* WJMazeView.h */,
+				992CC56D1C47478500AAAB92 /* WJMazeView.m */,
+			);
+			name = VIews;
+			sourceTree = "<group>";
+		};
+		99CF45F11C449117000BA046 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		99CF45F21C44912C000BA046 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45E71C4488C7000BA046 /* Stack.h */,
+				99CF45E81C4488C7000BA046 /* Stack.m */,
+				99CF45EA1C448C30000BA046 /* Path.h */,
+				99CF45EB1C448C30000BA046 /* Path.m */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		99CF45F31C449146000BA046 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				99CF45F41C449204000BA046 /* WJFirstController.h */,
+				99CF45F51C449204000BA046 /* WJFirstController.m */,
+				99CF45F71C449660000BA046 /* WJMainViewController.h */,
+				99CF45F81C449660000BA046 /* WJMainViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		99CF45B01C448750000BA046 /* 走迷宫 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99CF45DE1C448751000BA046 /* Build configuration list for PBXNativeTarget "走迷宫" */;
+			buildPhases = (
+				99CF45AD1C448750000BA046 /* Sources */,
+				99CF45AE1C448750000BA046 /* Frameworks */,
+				99CF45AF1C448750000BA046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "走迷宫";
+			productName = "走迷宫";
+			productReference = 99CF45B11C448750000BA046 /* 走迷宫.app */;
+			productType = "com.apple.product-type.application";
+		};
+		99CF45C91C448751000BA046 /* 走迷宫Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99CF45E11C448751000BA046 /* Build configuration list for PBXNativeTarget "走迷宫Tests" */;
+			buildPhases = (
+				99CF45C61C448751000BA046 /* Sources */,
+				99CF45C71C448751000BA046 /* Frameworks */,
+				99CF45C81C448751000BA046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99CF45CC1C448751000BA046 /* PBXTargetDependency */,
+			);
+			name = "走迷宫Tests";
+			productName = "走迷宫Tests";
+			productReference = 99CF45CA1C448751000BA046 /* 走迷宫Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		99CF45D41C448751000BA046 /* 走迷宫UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99CF45E41C448751000BA046 /* Build configuration list for PBXNativeTarget "走迷宫UITests" */;
+			buildPhases = (
+				99CF45D11C448751000BA046 /* Sources */,
+				99CF45D21C448751000BA046 /* Frameworks */,
+				99CF45D31C448751000BA046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99CF45D71C448751000BA046 /* PBXTargetDependency */,
+			);
+			name = "走迷宫UITests";
+			productName = "走迷宫UITests";
+			productReference = 99CF45D51C448751000BA046 /* 走迷宫UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99CF45A91C448750000BA046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WJ;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = wangju;
+				TargetAttributes = {
+					99CF45B01C448750000BA046 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XCDWEQ56GP;
+					};
+					99CF45C91C448751000BA046 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XCDWEQ56GP;
+						TestTargetID = 99CF45B01C448750000BA046;
+					};
+					99CF45D41C448751000BA046 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XCDWEQ56GP;
+						TestTargetID = 99CF45B01C448750000BA046;
+					};
+				};
+			};
+			buildConfigurationList = 99CF45AC1C448750000BA046 /* Build configuration list for PBXProject "走迷宫" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99CF45A81C448750000BA046;
+			productRefGroup = 99CF45B21C448750000BA046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99CF45B01C448750000BA046 /* 走迷宫 */,
+				99CF45C91C448751000BA046 /* 走迷宫Tests */,
+				99CF45D41C448751000BA046 /* 走迷宫UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		99CF45AF1C448750000BA046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99CF45C41C448750000BA046 /* LaunchScreen.storyboard in Resources */,
+				99CF45C11C448750000BA046 /* Assets.xcassets in Resources */,
+				99CF45BF1C448750000BA046 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99CF45C81C448751000BA046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99CF45D31C448751000BA046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99CF45AD1C448750000BA046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				992CC56E1C47478500AAAB92 /* WJMazeView.m in Sources */,
+				99CF45EC1C448C30000BA046 /* Path.m in Sources */,
+				99CF45F91C449660000BA046 /* WJMainViewController.m in Sources */,
+				99CF45F01C448E68000BA046 /* WJPathButton.m in Sources */,
+				99CF45E91C4488C7000BA046 /* Stack.m in Sources */,
+				99CF45F61C449204000BA046 /* WJFirstController.m in Sources */,
+				99CF45B91C448750000BA046 /* AppDelegate.m in Sources */,
+				99CF45B61C448750000BA046 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99CF45C61C448751000BA046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99CF45CF1C448751000BA046 /* ___Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99CF45D11C448751000BA046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99CF45DA1C448751000BA046 /* ___UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99CF45CC1C448751000BA046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99CF45B01C448750000BA046 /* 走迷宫 */;
+			targetProxy = 99CF45CB1C448751000BA046 /* PBXContainerItemProxy */;
+		};
+		99CF45D71C448751000BA046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99CF45B01C448750000BA046 /* 走迷宫 */;
+			targetProxy = 99CF45D61C448751000BA046 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		99CF45BD1C448750000BA046 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99CF45BE1C448750000BA046 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		99CF45C21C448750000BA046 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				99CF45C31C448750000BA046 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		99CF45DC1C448751000BA046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		99CF45DD1C448751000BA046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		99CF45DF1C448751000BA046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "走迷宫/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yzu.---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99CF45E01C448751000BA046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "走迷宫/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yzu.---";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		99CF45E21C448751000BA046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "走迷宫Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yzu.---Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/走迷宫.app/走迷宫";
+			};
+			name = Debug;
+		};
+		99CF45E31C448751000BA046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "走迷宫Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yzu.---Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/走迷宫.app/走迷宫";
+			};
+			name = Release;
+		};
+		99CF45E51C448751000BA046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "走迷宫UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yzu.---UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "走迷宫";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		99CF45E61C448751000BA046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "走迷宫UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yzu.---UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "走迷宫";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99CF45AC1C448750000BA046 /* Build configuration list for PBXProject "走迷宫" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99CF45DC1C448751000BA046 /* Debug */,
+				99CF45DD1C448751000BA046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99CF45DE1C448751000BA046 /* Build configuration list for PBXNativeTarget "走迷宫" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99CF45DF1C448751000BA046 /* Debug */,
+				99CF45E01C448751000BA046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99CF45E11C448751000BA046 /* Build configuration list for PBXNativeTarget "走迷宫Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99CF45E21C448751000BA046 /* Debug */,
+				99CF45E31C448751000BA046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99CF45E41C448751000BA046 /* Build configuration list for PBXNativeTarget "走迷宫UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99CF45E51C448751000BA046 /* Debug */,
+				99CF45E61C448751000BA046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99CF45A91C448750000BA046 /* Project object */;
+}

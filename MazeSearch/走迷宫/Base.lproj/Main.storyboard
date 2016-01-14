@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="CvL-jJ-c7u">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dWE-CO-JT4">
+            <objects>
+                <navigationController id="CvL-jJ-c7u" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s9j-dy-y9b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Guk-9I-7TT" kind="relationship" relationship="rootViewController" id="T7s-vr-Bdy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sGA-Jp-oZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291" y="158"/>
+        </scene>
+        <!--初始化迷宫-->
+        <scene sceneID="Ul9-uQ-oDH">
+            <objects>
+                <viewController id="Guk-9I-7TT" customClass="WJFirstController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0oM-vL-ZKy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Alb-ll-1Ow"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="27B-La-atD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="数据结构课程设计" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abN-uE-Vbg">
+                                <rect key="frame" x="92" y="117" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="走迷宫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaW-eH-8U4">
+                                <rect key="frame" x="130" y="167" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="19w-kw-aPQ">
+                                <rect key="frame" x="33" y="218" width="267" height="108"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生成迷宫的行数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFh-DV-AJE">
+                                        <rect key="frame" x="8" y="18" width="136" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="生成迷宫的列数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m8-4f-kVc">
+                                        <rect key="frame" x="8" y="62" width="136" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cC5-XO-Jae">
+                                        <rect key="frame" x="144" y="14" width="115" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yDF-ae-aV0">
+                                        <rect key="frame" x="144" y="58" width="115" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnu-gu-2VL">
+                                <rect key="frame" x="110" y="368" width="101" height="54"/>
+                                <color key="backgroundColor" red="0.09130078847690648" green="1" blue="0.15848952775894376" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="生成迷宫">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qdT-zS-dVq" kind="push" id="CZG-8K-cWb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="初始化迷宫" id="wVJ-y3-IRq"/>
+                    <connections>
+                        <outlet property="colTextField" destination="yDF-ae-aV0" id="PZL-Sh-DkA"/>
+                        <outlet property="rowTextField" destination="cC5-XO-Jae" id="ZZz-r8-B5B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbt-8R-EjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="158"/>
+        </scene>
+        <!--走迷宫-->
+        <scene sceneID="Pii-M3-5dN">
+            <objects>
+                <viewController id="qdT-zS-dVq" customClass="WJMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Wg-r8-mpW"/>
+                        <viewControllerLayoutGuide type="bottom" id="bF1-zj-iP0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BN8-Oi-bk3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OjP-RE-zun">
+                                <rect key="frame" x="0.0" y="469" width="320" height="99"/>
+                                <subviews>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2g-1L-LTe">
+                                        <rect key="frame" x="94" y="8" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.5952099944" green="1" blue="0.46206795839999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="设置终点"/>
+                                        <connections>
+                                            <action selector="selectButton:" destination="qdT-zS-dVq" eventType="touchUpInside" id="oMA-V5-Imt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MA-zz-XL5">
+                                        <rect key="frame" x="171" y="8" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.5952099944" green="1" blue="0.46206795839999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="添加障碍"/>
+                                        <connections>
+                                            <action selector="selectButton:" destination="qdT-zS-dVq" eventType="touchUpInside" id="fnQ-cX-ryV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUe-O6-v7l">
+                                        <rect key="frame" x="109" y="46" width="105" height="38"/>
+                                        <color key="backgroundColor" red="1" green="0.55520677656559392" blue="0.17885334382188256" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="生成路径">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchMazepath" destination="qdT-zS-dVq" eventType="touchUpInside" id="SZu-wf-TKr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-7x-u4e">
+                                        <rect key="frame" x="8" y="8" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.59520999442773226" green="1" blue="0.46206795840036285" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="设置起点"/>
+                                        <connections>
+                                            <action selector="selectButton:" destination="qdT-zS-dVq" eventType="touchUpInside" id="FCo-QW-tTe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-Hw-Zar">
+                                        <rect key="frame" x="252" y="8" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.5952099944" green="1" blue="0.46206795839999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="清除障碍"/>
+                                        <connections>
+                                            <action selector="selectButton:" destination="qdT-zS-dVq" eventType="touchUpInside" id="drt-P2-cCS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.8485875039787083" blue="0.77235029689168289" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5DC-jd-ljq">
+                                <rect key="frame" x="0.0" y="64" width="320" height="407"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="走迷宫" id="Uhx-Fa-MZt"/>
+                    <connections>
+                        <outlet property="MazeScollView" destination="5DC-jd-ljq" id="6FB-xn-8yb"/>
+                        <outlet property="clearBtn" destination="BiM-Hw-Zar" id="lbz-km-wux"/>
+                        <outlet property="setEndPositionBtn" destination="C2g-1L-LTe" id="lbv-2y-GS9"/>
+                        <outlet property="setStartPositionBtn" destination="lT5-7x-u4e" id="En2-CX-gIB"/>
+                        <outlet property="setWallBtn" destination="7MA-zz-XL5" id="xWI-Ot-dg4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ma1-DX-U1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="158"/>
+        </scene>
+    </scenes>
+</document>
