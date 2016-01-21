@@ -16,4 +16,6 @@
 
 - (BOOL)isEmpty;
 
+- (void)clear;
+
 @end

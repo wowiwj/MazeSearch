@@ -39,6 +39,10 @@
     
 }
 
+- (void)clear
+{
+    [self.StackArray removeAllObjects];
+}
 
 - (id)pop
 {

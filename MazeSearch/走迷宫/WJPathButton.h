@@ -10,14 +10,11 @@
 #import "Path.h"
 
 @interface WJPathButton : UIButton
-
+//每个按钮包含一个路径，以便迷宫的检索
 @property (nonatomic,strong) Path *path;
 
 + (instancetype)pathButtonWithPath:(Path *)path;
 
 - (BOOL)pass;
-
-
-//+ (instancetype)nextButtonWithDirection:(PathDireaction)dir;
 
 @end

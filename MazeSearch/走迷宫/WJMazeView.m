@@ -9,28 +9,26 @@
 #import "WJMazeView.h"
 #import "WJPathButton.h"
 
-
 @implementation WJMazeView
-
 
 - (void)setStack:(Stack *)stack
 {
     _stack = stack;
-    if (_stack == nil) {
-        return;
-    }
-    
     [self setNeedsDisplay];
-
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    self.alpha = 0;
+}
 
 - (void)drawRect:(CGRect)rect
 {
+    if (self.stack == nil) {
+        return;
+    }
     WJPathButton *pathButton = self.stack.pop;
     
-    //获取上下文
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
     //添加路径
     UIBezierPath *path = [UIBezierPath bezierPath];
     
@@ -40,11 +38,11 @@
         pathButton = self.stack.pop;
         [path addLineToPoint:pathButton.center];
     }
+    path.lineWidth = 8;//设置线宽
+    [[UIColor greenColor] set];//设置画线颜色
+    path.lineJoinStyle = kCGLineJoinRound;//设置线段圆角
     
-    CGContextAddPath(ctx, path.CGPath);
-    CGContextStrokePath(ctx);
+    [path stroke];
 
 }
-
-
 @end

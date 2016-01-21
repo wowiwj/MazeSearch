@@ -11,8 +11,6 @@
 
 @interface WJMazeView : UIView
 
-@property (nonatomic,strong) Stack *stack;
-
-
+@property (nonatomic,weak) Stack *stack;
 
 @end

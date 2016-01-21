@@ -12,22 +12,20 @@
 #import "Path.h"
 #import "Stack.h"
 
-
 #define ButtonWH 30
 #define Padding 3
-
 
 @interface WJMainViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *MazeScollView;
 
 @property (nonatomic,strong) UIView *MazeView;
 
+@property (nonatomic,strong) WJMazeView *mazePathView;
 
 @property (weak, nonatomic) IBOutlet UIButton *setStartPositionBtn;
 @property (weak, nonatomic) IBOutlet UIButton *setEndPositionBtn;
 @property (weak, nonatomic) IBOutlet UIButton *setWallBtn;
 @property (weak, nonatomic) IBOutlet UIButton *clearBtn;
-
 
 @property (nonatomic,strong) WJPathButton *startButton;//迷宫入口按钮
 @property (nonatomic,strong) WJPathButton *endButton;//迷宫终点按钮
@@ -35,25 +33,17 @@
 //按钮状态类型
 @property (nonatomic,strong) UIButton *selectStatusButton;
 
-
 //位置没有按钮是，以墙处理
 @property (nonatomic,strong) WJPathButton *wallButton;
 
-
 @property (nonatomic,strong) NSMutableArray *allButtons;
 
-
 @property (nonatomic,strong) Stack *stack;
-
-
-
-
-
 @end
 
 @implementation WJMainViewController
 
-
+#pragma mark - 视图和模型的懒加载
 - (UIView *)MazeView
 {
     if (_MazeView == nil) {
@@ -70,20 +60,12 @@
         if (ViewW < self.MazeScollView.bounds.size.width) {
             
             ViewX = (self.MazeScollView.bounds.size.width - ViewW) * 0.5f;
-            
         }
-        
         if (ViewH < self.MazeScollView.bounds.size.height) {
             
             ViewY = (self.MazeScollView.bounds.size.height - ViewH) * 0.5f;
-            
         }
-        
         _MazeView.frame = CGRectMake(ViewX, ViewY, ViewW, ViewH);
-        
-        
-        
-        
         [self.MazeScollView addSubview:_MazeView];
         
     }
@@ -91,6 +73,24 @@
     return _MazeView;
 }
 
+
+
+- (WJMazeView *)mazePathView
+{
+    if (_mazePathView == nil) {
+        
+        _mazePathView = [[WJMazeView alloc] init];
+        
+        _mazePathView.frame = self.MazeView.bounds;
+        _mazePathView.alpha = 0;
+        
+        [self.MazeView addSubview:_mazePathView];
+        
+    }
+    
+    return _mazePathView;
+    
+}
 
 - (NSMutableArray *)allButtons
 {
@@ -115,49 +115,38 @@
 
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad {//主界面加载完成的时候调用
     [super viewDidLoad];
-    
+    //设置迷宫可滚动视图的滚动区域
     self.MazeScollView.contentSize = self.MazeView.bounds.size;
-    
-    [self MazeView];
-    
-    
-    [self addPathButton];
-    
-    
-    
+
+    [self addPathButton];//添加按钮
 }
-
-
+#pragma mark - 给视图添加按钮图块，设定按钮位置以及监听点击事件
 - (void)addPathButton
 {
-    
     for (int i = 0; i < self.MazeRow; i++) {
         
         for (int j = 0; j < self.MazeCol; j++) {
           
-            
             Path *path = [Path pathWithRow:i andCol:j andMazeCol:self.MazeCol];
             
             WJPathButton *pathButton = [WJPathButton pathButtonWithPath:path];
-            pathButton.path = path;
+            pathButton.path = path;//给按钮添加路径
             
             [self.MazeView addSubview:pathButton];
             
             pathButton.backgroundColor = [UIColor whiteColor];
             
-            [pathButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-            
-            
+            [pathButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];//监听点击方法
+
             [self.allButtons addObject:pathButton];
             
-            [self setButtonPosition];
+            [self setButtonPosition];//设置添加按钮的位置
         }
         
     }
 }
-
 
 - (void)setButtonPosition
 {
@@ -188,26 +177,19 @@
     }
     
 }
-
 //迷宫路径按钮被点击
 - (void)buttonClicked:(WJPathButton *)button
 {
     
     if (self.selectStatusButton.tag == 1) {//设置按钮为迷宫的入口位置
-        
         self.startButton.path.status = PathStatusEnable;
-        
         button.path.status = PathStatusStart;
-        
         self.startButton = button;
-        
     }
     else if (self.selectStatusButton.tag == 2)//设置按钮的迷宫为终点位置
     {
         self.endButton.path.status = PathStatusEnable;
-        
         button.path.status = PathStatusEnd;
-        
         self.endButton = button;
         
     }
@@ -224,10 +206,8 @@
     
 
 }
-
 - (IBAction)selectButton:(UIButton *)sender {
 
-    
     self.selectStatusButton.selected = NO;
     
     self.selectStatusButton = sender;
@@ -235,43 +215,44 @@
     
 }
 
+#pragma mark - 走迷宫核心算法
 - (IBAction)searchMazepath
 {
+    [self.stack clear];
     
+    [self findPath];//寻找迷宫路径
 
-    [self findPath];
+    if (![self.stack isEmpty])//显示路径
+    {
+        self.mazePathView.alpha = 0.4;
+        self.mazePathView.stack = self.stack;
+        
+    }
+    else//提示没有找到路径
+    {
+        UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"寻找失败!" message:@"没有找到路径" preferredStyle:UIAlertControllerStyleAlert];
     
-    
-//    if (![self.stack isEmpty])
-//    {
-//        self.MazeView.stack = self.stack;
-//        
-//    }
-    
-    while (![self.stack isEmpty]) {
-            
-        WJPathButton *button = [self.stack pop];
-            
-        if (button == self.startButton || button == self.endButton) {
-                continue;
-            }
-            
-        button.backgroundColor = [UIColor blueColor];
-            
+        UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alertVc addAction:cancle];
+        [self presentViewController:alertVc animated:YES completion:nil];
     }
     
- 
+    for (WJPathButton *pathButton in self.allButtons) {
+        Path *btnPath = pathButton.path;
+        
+        btnPath.isPass = NO;
+        btnPath.nextDireaction = PathDieactionTop;
+        pathButton.path = btnPath;
+        
+    }
+    
 }
 
-
-- (BOOL)findPath
+- (BOOL)findPath//走迷宫
 {
-
-    
     Stack *stack = [[Stack alloc] init];
 
     self.stack = stack;
-    
     
     int cureStep = 1;//探索第一步
     
@@ -324,7 +305,7 @@
 
 }
 
-
+//根据当前按钮寻找下一个按钮
 - (WJPathButton *)nextButtonWithLocalBtn:(WJPathButton *)button
 {
     Path *path = button.path;
@@ -339,8 +320,6 @@
     {
         nextPoint.y -= 1;
         nextPoint.x += 1;
-        
-    
     }
     else if (path.nextDireaction == PathDieactionRight)
     {
@@ -383,13 +362,6 @@
             return button;
         }
     }
-    
-    
     return self.wallButton;
-    
 }
-
-
-
-
 @end

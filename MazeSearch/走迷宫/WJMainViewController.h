@@ -13,6 +13,4 @@
 @property (nonatomic,assign) int MazeRow;
 @property (nonatomic,assign) int MazeCol;
 
-
-
 @end

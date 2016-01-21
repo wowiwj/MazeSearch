@@ -11,16 +11,16 @@
 
 @class Path;
 
+//路径状态
 typedef enum
 {
     PathStatusEnable,
     PathStatusWall,
     PathStatusStart,
-    PathStatusEnd,
-    PathStatusTest
+    PathStatusEnd
 }PathStatus;
 
-
+//路径的方向
 typedef enum
 {
     PathDieactionTop = 1,
@@ -46,10 +46,8 @@ typedef enum
 //代理
 @property (nonatomic,weak) id<PathDelegate> delegate;
 
-
 //路径的状态
 @property (nonatomic,assign) PathStatus status;
-
 
 @property (nonatomic,assign) CGPoint point;//图块在迷宫中的坐标位置
 @property (nonatomic,assign) int ord;//上一个路径的序号
